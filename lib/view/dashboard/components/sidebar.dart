@@ -20,8 +20,8 @@ class _SidebaseScreenState extends State<SidebaseScreen> {
       "leading": Icon(Icons.account_circle, color: AppColors.color1),
       "title": "Profile",
       "trailing": const Icon(Icons.chevron_right),
-      "action_id": 1
-    },
+      "action_id": 1 
+    }, 
     {
       "leading": Icon(Icons.account_circle, color: AppColors.color1),
       "title": "Profile",
