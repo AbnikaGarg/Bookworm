@@ -9,6 +9,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'transfer_funds.dart';
+
 class Wallet extends StatefulWidget {
   const Wallet({super.key});
 
@@ -28,7 +30,7 @@ class _FundsHistoryState extends State<Wallet> {
               end: Alignment.bottomRight,
               colors: [
                 Colors.white,
-                const Color(0x56E27329).withOpacity(0.1),
+                const Color(0x56E27329).withOpacity(0.4),
               ]),
         ),
         child: Padding(
@@ -50,7 +52,7 @@ class _FundsHistoryState extends State<Wallet> {
                             fontSize: 13.sp,
                             color: const Color.fromRGBO(77, 77, 77, 1)),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 2,
                       ),
                       Text(
@@ -58,12 +60,12 @@ class _FundsHistoryState extends State<Wallet> {
                         style: GoogleFonts.montserrat(
                           fontSize: 18.sp,
                           fontWeight: FontWeight.w700,
-                          color: Color.fromARGB(255, 35, 35, 35),
+                          color: const Color.fromARGB(255, 35, 35, 35),
                         ),
                       ),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Container(
                     height: 30.h,
                     width: 30.h,
@@ -71,7 +73,7 @@ class _FundsHistoryState extends State<Wallet> {
                       shape: BoxShape.circle,
                       color: AppColors.whiteColor,
                     ),
-                    child: Icon(Icons.search),
+                    child: const Icon(Icons.search),
                   ),
                 ],
               ),
@@ -81,7 +83,7 @@ class _FundsHistoryState extends State<Wallet> {
                 width: double.maxFinite,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(22),
-                    color: Color.fromRGBO(24, 24, 24, 1),
+                    color: const Color.fromRGBO(24, 24, 24, 1),
                     image: const DecorationImage(
                         fit: BoxFit.cover,
                         image: AssetImage(
@@ -101,9 +103,9 @@ class _FundsHistoryState extends State<Wallet> {
                               style: GoogleFonts.montserrat(
                                   fontSize: 14.sp,
                                   fontWeight: FontWeight.w400,
-                                  color: Color(0xFF909090)),
+                                  color: const Color(0xFF909090)),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 8,
                             ),
                             Text(
@@ -129,7 +131,41 @@ class _FundsHistoryState extends State<Wallet> {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            Get.to(AddFunds());
+                            Get.to(() => const AddFunds());
+                          },
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                        color: AppColors.whiteColor)),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(2.0),
+                                  child: Icon(
+                                    Icons.add,
+                                    size: 15,
+                                    color: AppColors.whiteColor,
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 12,
+                              ),
+                              Text(
+                                "Add Funds",
+                                style: GoogleFonts.montserrat(
+                                    fontSize: 14.sp,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Get.to(() => const TransferFunds());
                           },
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -138,7 +174,7 @@ class _FundsHistoryState extends State<Wallet> {
                                 "assets/icons/addfund.svg",
                                 height: 18,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 12,
                               ),
                               Text(
@@ -150,35 +186,6 @@ class _FundsHistoryState extends State<Wallet> {
                               ),
                             ],
                           ),
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  border:
-                                      Border.all(color: AppColors.whiteColor)),
-                              child: Padding(
-                                padding: const EdgeInsets.all(2.0),
-                                child: Icon(
-                                  Icons.add,
-                                  size: 15,
-                                  color: AppColors.whiteColor,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-                            Text(
-                              "Add Funds",
-                              style: GoogleFonts.montserrat(
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white),
-                            ),
-                          ],
                         ),
                       ],
                     ),
@@ -197,7 +204,7 @@ class _FundsHistoryState extends State<Wallet> {
                           style: GoogleFonts.montserrat(
                             fontSize: 16.sp,
                             fontWeight: FontWeight.w700,
-                            color: Color.fromARGB(255, 35, 35, 35),
+                            color: const Color.fromARGB(255, 35, 35, 35),
                           ),
                         ),
                         Text(

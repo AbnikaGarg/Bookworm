@@ -1,4 +1,3 @@
-
 import 'package:bookwormnew/utils/app_colors.dart';
 import 'package:bookwormnew/utils/image_strings.dart';
 import 'package:flutter/material.dart';

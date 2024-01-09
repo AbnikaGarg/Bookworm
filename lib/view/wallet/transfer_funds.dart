@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import '../../components/custombutton.dart';
 import '../../components/text_fields.dart';
 import '../../utils/app_colors.dart';
-import '../../utils/base_style.dart';
 import '../../utils/image_strings.dart';
 
 class TransferFunds extends StatefulWidget {
@@ -19,128 +20,78 @@ class _TransferFundsState extends State<TransferFunds> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        leading: const Icon(
-          Icons.arrow_back_ios_new,
-          size: 18,
+        elevation: 1,
+        leading: GestureDetector(
+          onTap: () {
+            Get.back();
+          },
+          child: const Icon(
+            Icons.arrow_back_ios,
+            size: 20,
+          ),
         ),
-        title: Text(
-          "Transfer Funds",
-          style: BaseStyle.blackText16fw600,
+        title: const Text(
+          "Transfer Fund",
         ),
       ),
-      body: Stack(children: [
-        Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topRight,
-                end: Alignment.bottomRight,
-                colors: [
-                  Colors.white,
-                  const Color(0x56E27329).withOpacity(0.4),
-                ]),
-          ),
-        ),
-        SingleChildScrollView(
-          child: Container(
-            margin: EdgeInsets.symmetric(horizontal: 10),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                heightSpace20,
-                Text(
-                  "Available Fund -105.00",
-                  style: BaseStyle.blackText18fw600,
-                ),
-                Text(
-                  "Activation Wallet / Transfer Fund",
-                  style: BaseStyle.blackText18fw600,
-                ),
-                heightSpace20,
-                Card(
-                  elevation: 3,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: AppColors.whiteColor,
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: const [
-                          BoxShadow(
-                              color: Colors.grey,
-                              blurRadius: 10,
-                              spreadRadius: -8,
-                              blurStyle: BlurStyle.normal)
-                        ]),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 10, horizontal: 20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          // Text(
-                          //   "Transfer To",
-                          //   style: BaseStyle.blackText14fw500,
-                          // ),
-                          // heightSpace10,
-                          // CustomTextFieldWithBorder(
-                          //   textController: c1,
-                          // ),
-                          // heightSpace10,
-                          // Text(
-                          //   "Enter Amount To Transfer",
-                          //   style: BaseStyle.blackText14fw500,
-                          // ),
-                          // heightSpace10,
-                          // CustomTextFieldWithBorder(
-                          //   textController: c1,
-                          // ),
-                          // heightSpace10,
-                          // Text(
-                          //   "Password",
-                          //   style: BaseStyle.blackText14fw500,
-                          // ),
-                          // heightSpace10,
-                          // CustomTextFieldWithBorder(
-                          //   textController: c1,
-                          // ),
-                          // heightSpace10,
-                          Row(
-                            children: [
-                              commonButton(
-                                  title: "Transfer Fund",
-                                  color: AppColors.buttoncolor2,
-                                  width: 130.w),
-                              widthSpace10,
-                              commonButton(
-                                  title: "Cancel",
-                                  color: AppColors.buttoncolor1,
-                                  width: 100.w),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            SizedBox(height: 14.h),
+            Text(
+              "Transfer to",
+              style: GoogleFonts.montserrat(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 14.sp,
+                  color: Color.fromRGBO(0, 0, 0, 1)),
             ),
-          ),
-        )
-      ]),
+            heightSpace5,
+            MyTextField(
+              hintText: "Enter UserId to which you want to transfer",
+              color: AppColors.aquaColors,
+            ),
+            SizedBox(height: 14.h),
+            Text(
+              "Enter Amount to transfer",
+              style: GoogleFonts.montserrat(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 14.sp,
+                  color: Color.fromRGBO(0, 0, 0, 1)),
+            ),
+            heightSpace5,
+            MyTextField(
+              hintText: "Enter Amount to transfer",
+              color: AppColors.aquaColors,
+            ),
+            SizedBox(height: 14.h),
+            Text(
+              "Password",
+              style: GoogleFonts.montserrat(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 14.sp,
+                  color: Color.fromRGBO(0, 0, 0, 1)),
+            ),
+            heightSpace5,
+            MyTextField(
+              hintText: "Please enter your password",
+              color: AppColors.aquaColors,
+            ),
+            heightSpace50,
+            Center(
+              child: GestureDetector(
+                onTap: () {},
+                child: const CustomButton(
+                  title1: "Transfer Funds",
+                ),
+              ),
+            ),
+          ]),
+        ),
+      ),
     );
   }
-}
-
-commonButton({title, color, width}) {
-  return Container(
-      margin: const EdgeInsets.symmetric(vertical: 10),
-      alignment: Alignment.center,
-      height: 40.h,
-      width: width,
-      decoration:
-          BoxDecoration(borderRadius: BorderRadius.circular(5), color: color),
-      child: Text(
-        title,
-        style: BaseStyle.whitetext14fw600,
-      ));
 }

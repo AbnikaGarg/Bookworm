@@ -1,7 +1,7 @@
 import 'package:bookwormnew/components/custombutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../components/text_fields.dart';
 import '../../utils/app_colors.dart';
@@ -25,9 +25,14 @@ class _AddFundsState extends State<AddFunds> {
       backgroundColor: AppColors.whiteColor,
       appBar: AppBar(
         elevation: 1,
-        leading: const Icon(
-          Icons.arrow_back_ios_new,
-          size: 18,
+        leading: GestureDetector(
+          onTap: () {
+            Get.back();
+          },
+          child: const Icon(
+            Icons.arrow_back_ios,
+            size: 20,
+          ),
         ),
         title: const Text(
           "Add Fund",

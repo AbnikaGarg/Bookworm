@@ -3,8 +3,9 @@ import 'package:bookwormnew/utils/base_style.dart';
 import 'package:bookwormnew/utils/image_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'components/sidebar.dart';
 
 class DashBoardScreen extends StatefulWidget {
   const DashBoardScreen({super.key});
@@ -18,7 +19,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      drawer: Drawer(),
+      drawer: const SidebaseScreen(),
       appBar: AppBar(
         elevation: 0,
         titleSpacing: 0,
@@ -64,7 +65,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.green, width: 3),
                           shape: BoxShape.circle,
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image: AssetImage(ImagePath.profile),
                               fit: BoxFit.contain)),
                     ),
@@ -185,96 +186,6 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                       ]),
                 ),
               ),
-              //   Padding(
-              //     padding: const EdgeInsets.all(10.0),
-              //     child: Column(
-              //       children: [
-              //         Row(
-              //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //           children: [
-              //             customBox(
-              //               title1: "Activation wallet",
-              //               title2: "150.00 USDT",
-              //               conColor1: const Color(0XFFE27329),
-              //               concolor2: const Color(0XFFE27329),
-              //               myicon: const Icon(
-              //                 Icons.account_balance_wallet,
-              //                 color: Colors.white,
-              //                 size: 16,
-              //               ),
-              //             ),
-              //             customBox(
-              //               title1: "Income wallet",
-              //               title2: "150.00 USDT",
-              //               conColor1: const Color(0XFFFFDE59),
-              //               concolor2: const Color(0XFFFFDE59),
-              //               myicon: const Icon(
-              //                 Icons.account_balance_wallet,
-              //                 color: Colors.black,
-              //                 size: 16,
-              //               ),
-              //             ),
-              //           ],
-              //         ),
-              //         heightSpace20,
-              //         Row(
-              //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //           children: [
-              //             customBox(
-              //               title1: "Level Income",
-              //               title2: "150.00 USDT",
-              //               conColor1: const Color(0XFFC61834),
-              //               concolor2: const Color(0XFFC61834),
-              //               myicon: const Icon(
-              //                 Icons.attach_money,
-              //                 color: Colors.white,
-              //                 size: 16,
-              //               ),
-              //             ),
-              //             customBox(
-              //               title1: "Generation Income",
-              //               title2: "150.00 USDT",
-              //               conColor1: const Color(0XFF07A0F6),
-              //               concolor2: const Color(0XFF07A0F6),
-              //               myicon: const Icon(
-              //                 Icons.attach_money_outlined,
-              //                 color: Colors.white,
-              //                 size: 16,
-              //               ),
-              //             ),
-              //           ],
-              //         ),
-              //         heightSpace20,
-              //         Row(
-              //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //           children: [
-              //             customBox(
-              //               title1: "Level Income",
-              //               title2: "150.00 USDT",
-              //               conColor1: const Color(0XFFE27329),
-              //               concolor2: const Color(0XFFE27329),
-              //               myicon: const Icon(
-              //                 Icons.attach_money,
-              //                 color: Colors.white,
-              //                 size: 16,
-              //               ),
-              //             ),
-              //             customBox(
-              //               title1: "Team Business",
-              //               title2: "150.00 USDT",
-              //               conColor1: const Color(0XFFE27329),
-              //               concolor2: const Color(0XFFE27329),
-              //               myicon: const Icon(
-              //                 Icons.group,
-              //                 color: Colors.white,
-              //                 size: 16,
-              //               ),
-              //             ),
-              //           ],
-              //         ),
-              //       ],
-              //     ),
-              //   ),
             ],
           ),
         ),
