@@ -25,7 +25,7 @@ class CustomTextField extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TextFormField(
-          validator: validator,
+          validator: validator,controller: controller,
           style: TextStyle(color: Color(0xFFD2D2D2), fontSize: 16.sp),
           decoration: InputDecoration(
             labelText: labelTitle,

@@ -12,7 +12,7 @@ class CustomBottomBar extends StatelessWidget {
 
 
   List pages = [
-    const DashBoardScreen(),
+     DashBoardScreen(),
     const Wallet(),
     const WalletAddressScreen(),
     const Center(child: Text('Profile')),

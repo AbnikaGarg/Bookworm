@@ -1,12 +1,18 @@
+import 'package:bookwormnew/bindings/intial_bindings.dart';
+import 'package:bookwormnew/bindings/shared_pref.dart';
 import 'package:bookwormnew/routes/routes.dart';
+import 'package:bookwormnew/service/api_client.dart';
 import 'package:bookwormnew/utils/app_colors.dart';
+import 'package:bookwormnew/utils/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'components/bottomnavigation.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await PreferenceUtils.init();
   runApp(const MyApp());
 }
 
@@ -31,8 +37,10 @@ class MyApp extends StatelessWidget {
               color: AppColors.blackColor),
         )),
         debugShowCheckedModeBanner: false,
-        initialRoute: '/home',
+        initialRoute: Routes.splash,
         getPages: appRoutes(),
+        initialBinding: IntialBindings(),
+        transitionDuration: Duration(milliseconds: 300),
       ),
       designSize: const Size(375, 812),
     );
