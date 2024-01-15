@@ -1,10 +1,10 @@
 import 'package:bookwormnew/routes/routes.dart';
 import 'package:bookwormnew/utils/app_colors.dart';
+import 'package:bookwormnew/view/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'components/bottomnavigation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,6 +33,8 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         initialRoute: '/home',
         getPages: appRoutes(),
+
+//        home: const ProfileScreen(),
       ),
       designSize: const Size(375, 812),
     );

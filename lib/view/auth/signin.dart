@@ -36,7 +36,7 @@ class _SignInScreenState extends State<SignInScreen> {
             width: double.infinity,
           ),
           Container(
-            padding:  EdgeInsets.symmetric(horizontal: 14.w),
+            padding: EdgeInsets.symmetric(horizontal: 14.w),
             child: Form(
               key: _formKey,
               child: Column(
@@ -54,17 +54,23 @@ class _SignInScreenState extends State<SignInScreen> {
                       style: BaseStyle.orangeText24fw600,
                     ),
                   ),
-                   heightSpace20,
+                  heightSpace20,
                   CustomTextField(
                     labelTitle: "Email ID*",
-                    suffixIcon: Icon(Icons.alternate_email, size: 20,),
+                    suffixIcon: Icon(
+                      Icons.alternate_email,
+                      size: 20,
+                    ),
                     controller: emailController,
                     validator: FieldValidator().emailValidator,
                   ),
                   heightSpace20,
                   CustomTextField(
                     labelTitle: "Password*",
-                    suffixIcon: const Icon(Icons.lock, size: 20,),
+                    suffixIcon: const Icon(
+                      Icons.lock,
+                      size: 20,
+                    ),
                     controller: passwordController,
                     validator: FieldValidator().passwordValidator,
                   ),
@@ -73,7 +79,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     onTap: () {
                       if (_formKey.currentState!.validate()) {
                         print("Validated");
-                        Get.toNamed( Routes.home);
+                        Get.toNamed(Routes.home);
                       } else {
                         print("Validated");
                       }
@@ -114,7 +120,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       commonImage(imageUrl: ImagePath.appleImage)
                     ],
                   ),
-                 Spacer(),
+                  Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -128,10 +134,11 @@ class _SignInScreenState extends State<SignInScreen> {
                           },
                           child: Text(
                             "Sign Up",
-                            style: BaseStyle.orangeText16,
+                            style: BaseStyle.orangeText16fw500,
                           ))
                     ],
-                  ), heightSpace20,
+                  ),
+                  heightSpace20,
                 ],
               ),
             ),
@@ -141,13 +148,13 @@ class _SignInScreenState extends State<SignInScreen> {
     );
   }
 
-commonImage({imageUrl}) {
-  return Container(
-    height: 50,
-    width: 50,
-    decoration: BoxDecoration(
-        image: DecorationImage(image: AssetImage(imageUrl)),
-        shape: BoxShape.circle),
-  );
-}
+  commonImage({imageUrl}) {
+    return Container(
+      height: 50,
+      width: 50,
+      decoration: BoxDecoration(
+          image: DecorationImage(image: AssetImage(imageUrl)),
+          shape: BoxShape.circle),
+    );
+  }
 }

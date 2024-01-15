@@ -1,6 +1,7 @@
 import 'package:bookwormnew/controllers/bottombar_controller.dart';
 import 'package:bookwormnew/utils/app_colors.dart';
 import 'package:bookwormnew/view/dashboard/dashbaord.dart';
+import 'package:bookwormnew/view/profile/profile.dart';
 import 'package:bookwormnew/view/withdraw/update_wallet_address.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,7 +15,7 @@ class CustomBottomBar extends StatelessWidget {
     const DashBoardScreen(),
     const Wallet(),
     const UpdateWalletAddressScreen(),
-    const Center(child: Text('Profile')),
+    const ProfileScreen()
   ];
   // int currentIndex = 0;
   // void onTap(int index) {

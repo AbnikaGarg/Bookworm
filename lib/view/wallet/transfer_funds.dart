@@ -56,7 +56,7 @@ class _TransferFundsState extends State<TransferFunds> {
             ),
             SizedBox(height: 14.h),
             Text(
-              "Enter Amount to transfer",
+              "Amount",
               style: GoogleFonts.montserrat(
                   fontWeight: FontWeight.w500,
                   fontSize: 14.sp,

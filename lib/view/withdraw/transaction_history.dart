@@ -45,14 +45,13 @@ class IncomeWallet extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20)),
                 elevation: 4,
                 child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                  padding: const EdgeInsets.all(15),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         "Balance in your Income Wallet (USDT)",
-                        style: BaseStyle.orangeText14,
+                        style: BaseStyle.orangeText16fw600,
                       ),
                       heightSpace20,
                       Row(
@@ -70,8 +69,8 @@ class IncomeWallet extends StatelessWidget {
                                 color: AppColors.color1,
                                 borderRadius: BorderRadius.circular(10)),
                             child: Text(
-                              "WITHDRAWAL",
-                              style: BaseStyle.whitetext11,
+                              "Withdrawal",
+                              style: BaseStyle.whitetext12fw600,
                             ),
                           ),
                         ],
@@ -81,22 +80,6 @@ class IncomeWallet extends StatelessWidget {
                   ),
                 ),
               ),
-              heightSpace5,
-
-              // Row(
-              //   crossAxisAlignment: CrossAxisAlignment.center,
-              //   children: [
-              //     const Icon(
-              //       Icons.arrow_back_ios_new,
-              //       size: 18,
-              //     ),
-              //     widthSpace10,
-              //     Text(
-              //       "Transaction History",
-              //       style: BaseStyle.blackText16fw600,
-              //     ),
-              //   ],
-              // ),
               heightSpace10,
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -105,7 +88,6 @@ class IncomeWallet extends StatelessWidget {
                   style: BaseStyle.blackText16fw600,
                 ),
               ),
-
               heightSpace10,
               Card(
                 shape: RoundedRectangleBorder(
@@ -130,17 +112,16 @@ class IncomeWallet extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Text(
-                        "Transaction Id: 1234567890",
-                        style: BaseStyle.blackText14fw400,
-                      ),
+                      heightSpace5,
+                      Text("Transaction Id: 1234567890",
+                          style: BaseStyle.blackText12fw400),
                       Text(
                         "12 Oct 2023 - 09:15PM",
-                        style: BaseStyle.blackText14fw400,
+                        style: BaseStyle.blackText12fw400,
                       ),
-                      heightSpace10,
+                      heightSpace5,
                       const Divider(),
-                      heightSpace10,
+                      heightSpace5,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -154,13 +135,14 @@ class IncomeWallet extends StatelessWidget {
                           ),
                         ],
                       ),
+                      heightSpace5,
                       Text(
                         "12 Oct 2023 - 09:15PM",
-                        style: BaseStyle.blackText14fw400,
+                        style: BaseStyle.blackText12fw400,
                       ),
                       Text(
                         "12 Oct 2023 - 09:15PM",
-                        style: BaseStyle.blackText14fw400,
+                        style: BaseStyle.blackText12fw400,
                       ),
                     ],
                   ),

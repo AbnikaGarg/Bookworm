@@ -78,14 +78,14 @@ class _UpdateWalletAddressScreenState extends State<UpdateWalletAddressScreen> {
                         children: [
                           Text(
                             "You can only add your crypto wallet once. If you want to add any other address or make any changes, please contact us through the ticket section available in your back office.",
-                            style: BaseStyle.blackText14fw400,
+                            style: BaseStyle.blackText12fw400,
                           ),
                           heightSpace20,
                           Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              "USDT(TRC20) ADDRESS:",
-                              style: BaseStyle.orangeText14fw700,
+                              "USDT(TRC20) ADDRESS :",
+                              style: BaseStyle.orangeText16fw600,
                             ),
                           ),
                           heightSpace20,
@@ -107,7 +107,7 @@ class _UpdateWalletAddressScreenState extends State<UpdateWalletAddressScreen> {
                             child: TextFormField(
                               style: BaseStyle.blackText14fw400,
                               decoration: const InputDecoration(
-                                  contentPadding: EdgeInsets.only(bottom: 12),
+                                  contentPadding: EdgeInsets.all(6),
                                   border: InputBorder.none),
                             ),
                           ),
@@ -116,7 +116,7 @@ class _UpdateWalletAddressScreenState extends State<UpdateWalletAddressScreen> {
                             alignment: Alignment.centerLeft,
                             child: Text(
                               "Add your external ‘receive’ USDT address",
-                              style: BaseStyle.blackText14fw400,
+                              style: BaseStyle.blackText12fw400,
                             ),
                           ),
                           heightSpace30,
@@ -125,10 +125,10 @@ class _UpdateWalletAddressScreenState extends State<UpdateWalletAddressScreen> {
                               Get.to(() => const IncomeWallet());
                             },
                             child: const CustomButton(
-                              title1: "UPDATE",
+                              title1: "Update",
                             ),
                           ),
-                          heightSpace40,
+                          heightSpace30,
                         ],
                       ),
                     ),
