@@ -129,7 +129,7 @@ class DashBoardScreen extends StatelessWidget {
                             myicon: Icon(
                               Icons.account_balance_wallet,
                               color: Colors.white,
-                              size: 20.sp,
+                              size: 18.sp,
                             ),
                           ),
                           customBox(
@@ -137,40 +137,29 @@ class DashBoardScreen extends StatelessWidget {
                             title2: "${controller.wallet!.incomeWallet} USDT",
                             conColor1: const Color(0XFFFFDE59),
                             concolor2: const Color(0XFFFFDE59),
-                            myicon: const Icon(
+                            myicon: Icon(
                               Icons.account_balance_wallet,
                               color: Colors.black,
-                              size: 16,
+                              size: 18.sp,
                             ),
                           ),
                           customBox(
                             title1: "Level Income",
                             title2: "${controller.wallet!.levelIncome} USDT",
-                            conColor1: const Color(0XFFE27329),
-                            concolor2: const Color(0XFFE27329),
-                            myicon: const Icon(
+                            conColor1: const Color(0xFF07A0F6),
+                            concolor2: const Color(0xFF07A0F6),
+                            myicon: Icon(
                               Icons.account_balance_wallet,
                               color: Colors.white,
-                              size: 16,
+                              size: 18.sp,
                             ),
                           ),
                           customBox(
                             title1: "Generation Income",
                             title2:
                                 "${controller.wallet!.generationIncome} USDT",
-                            conColor1: const Color(0XFFFFDE59),
-                            concolor2: const Color(0XFFFFDE59),
-                            myicon: const Icon(
-                              Icons.account_balance_wallet,
-                              color: Colors.black,
-                              size: 16,
-                            ),
-                          ),
-                          customBox(
-                            title1: "Total Income",
-                            title2: "${controller.wallet!.totalIncome} USDT",
-                            conColor1: const Color(0XFFE27329),
-                            concolor2: const Color(0XFFE27329),
+                            conColor1: const Color(0xFFC61834),
+                            concolor2: const Color(0xFFC61834),
                             myicon: const Icon(
                               Icons.account_balance_wallet,
                               color: Colors.white,
@@ -178,14 +167,25 @@ class DashBoardScreen extends StatelessWidget {
                             ),
                           ),
                           customBox(
+                            title1: "Total Income",
+                            title2: "${controller.wallet!.totalIncome} USDT",
+                            conColor1: const Color(0xFF07A0F6),
+                            concolor2: const Color(0xFF07A0F6),
+                            myicon: Icon(
+                              Icons.account_balance_wallet,
+                              color: Colors.white,
+                              size: 18.sp,
+                            ),
+                          ),
+                          customBox(
                             title1: "Team Business",
                             title2: "${controller.wallet!.teamBusiness} USDT",
-                            conColor1: const Color(0XFFFFDE59),
-                            concolor2: const Color(0XFFFFDE59),
-                            myicon: const Icon(
+                            conColor1: const Color(0xFFC61834),
+                            concolor2: const Color(0xFFC61834),
+                            myicon: Icon(
                               Icons.account_balance_wallet,
-                              color: Colors.black,
-                              size: 16,
+                              color: Colors.white,
+                              size: 18.sp,
                             ),
                           ),
                         ]),
@@ -224,15 +224,15 @@ class DashBoardScreen extends StatelessWidget {
                       maxLines: 1,
                       style: GoogleFonts.montserrat(
                         color: const Color(0xffffffff),
-                        fontSize: 14,
+                        fontSize: 15,
                         height: 0,
                         fontWeight: FontWeight.w600,
                       )),
                 ),
               ),
               Container(
-                height: 25.h,
-                width: 25.h,
+                height: 32,
+                width: 32,
                 decoration: BoxDecoration(
                     borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(22),
