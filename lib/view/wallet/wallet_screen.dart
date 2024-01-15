@@ -125,32 +125,8 @@ class _FundsHistoryState extends State<Wallet> {
                       height: 22.h,
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        GestureDetector(
-                          onTap: () {
-                            Get.to(AddFunds());
-                          },
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              SvgPicture.asset(
-                                "assets/icons/addfund.svg",
-                                height: 18,
-                              ),
-                              SizedBox(
-                                height: 12,
-                              ),
-                              Text(
-                                "Transfer Funds",
-                                style: GoogleFonts.montserrat(
-                                    fontSize: 14.sp,
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.white),
-                              ),
-                            ],
-                          ),
-                        ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -179,6 +155,30 @@ class _FundsHistoryState extends State<Wallet> {
                                   color: Colors.white),
                             ),
                           ],
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Get.to(AddFunds());
+                          },
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              SvgPicture.asset(
+                                "assets/icons/addfund.svg",
+                                height: 22,
+                              ),
+                              SizedBox(
+                                height: 12,
+                              ),
+                              Text(
+                                "Transfer Funds",
+                                style: GoogleFonts.montserrat(
+                                    fontSize: 14.sp,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
