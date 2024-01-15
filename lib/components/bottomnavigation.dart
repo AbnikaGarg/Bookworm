@@ -10,7 +10,7 @@ import '../view/wallet/wallet_screen.dart';
 
 class CustomBottomBar extends StatelessWidget {
    CustomBottomBar({super.key});
-
+   
 
   List pages = [
      DashBoardScreen(),
