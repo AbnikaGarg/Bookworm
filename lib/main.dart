@@ -10,6 +10,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'view/profile/profilescreen.dart';
+import 'view/withdraw/update_wallet_address.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,25 +28,23 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => GetMaterialApp(
-        title: 'BookWorm',
-        theme: ThemeData(
-            //colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-            //useMaterial3: true,
-            appBarTheme: AppBarTheme(
-          backgroundColor: AppColors.whiteColor,
-          iconTheme: IconThemeData(color: AppColors.blackColor),
-          titleTextStyle: GoogleFonts.montserrat(
-              fontSize: 20.sp,
-              fontWeight: FontWeight.w700,
-              color: AppColors.blackColor),
-        )),
-        debugShowCheckedModeBanner: false,
-        initialRoute: Routes.splash,
-        getPages: appRoutes(),
-        initialBinding: IntialBindings(),
-        transitionDuration: const Duration(milliseconds: 300),
-        home: const ProfileScreen(),
-      ),
+          title: 'BookWorm',
+          theme: ThemeData(
+              //colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+              //useMaterial3: true,
+              appBarTheme: AppBarTheme(
+            backgroundColor: AppColors.whiteColor,
+            iconTheme: IconThemeData(color: AppColors.blackColor),
+            titleTextStyle: GoogleFonts.montserrat(
+                fontSize: 20.sp,
+                fontWeight: FontWeight.w700,
+                color: AppColors.blackColor),
+          )),
+          debugShowCheckedModeBanner: false,
+          initialRoute: Routes.splash,
+          getPages: appRoutes(),
+          initialBinding: IntialBindings(),
+          transitionDuration: const Duration(milliseconds: 300)),
       designSize: const Size(375, 812),
     );
   }

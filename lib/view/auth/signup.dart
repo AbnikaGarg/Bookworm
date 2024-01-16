@@ -26,6 +26,7 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
           Image.asset(
@@ -116,7 +117,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     onTap: () {
                       if (_formKey.currentState!.validate()) {
                         print("Validated");
-                        Get.to(() =>  SignInScreen());
+                        Get.to(() => SignInScreen());
                       } else {
                         print("Validated");
                       }
@@ -166,7 +167,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       ),
                       TextButton(
                           onPressed: () {
-                            Get.to(() =>  SignInScreen());
+                            Get.to(() => SignInScreen());
                           },
                           child: Text(
                             "Sign In",

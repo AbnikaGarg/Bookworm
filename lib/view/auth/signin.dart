@@ -21,6 +21,7 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: GetBuilder<AuthController>(builder: (controller) {
         return Stack(
           children: [
