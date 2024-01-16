@@ -127,54 +127,49 @@ class _FundsHistoryState extends State<Wallet> {
                       height: 22.h,
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        GestureDetector(
-                          onTap: () {
-                            Get.to(() => const AddFunds());
-                          },
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    border: Border.all(
-                                        color: AppColors.whiteColor)),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(2.0),
-                                  child: Icon(
-                                    Icons.add,
-                                    size: 15,
-                                    color: AppColors.whiteColor,
-                                  ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border:
+                                      Border.all(color: AppColors.whiteColor)),
+                              child: Padding(
+                                padding: const EdgeInsets.all(2.0),
+                                child: Icon(
+                                  Icons.add,
+                                  size: 15,
+                                  color: AppColors.whiteColor,
                                 ),
                               ),
-                              const SizedBox(
-                                height: 12,
-                              ),
-                              Text(
-                                "Add Funds",
-                                style: GoogleFonts.montserrat(
-                                    fontSize: 14.sp,
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.white),
-                              ),
-                            ],
-                          ),
+                            ),
+                            SizedBox(
+                              height: 12,
+                            ),
+                            Text(
+                              "Add Funds",
+                              style: GoogleFonts.montserrat(
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white),
+                            ),
+                          ],
                         ),
                         GestureDetector(
                           onTap: () {
-                            Get.to(() => const TransferFunds());
+                            Get.to(AddFunds());
                           },
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               SvgPicture.asset(
                                 "assets/icons/addfund.svg",
-                                height: 18,
+                                height: 22,
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 height: 12,
                               ),
                               Text(

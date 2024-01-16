@@ -1,8 +1,7 @@
 import 'package:bookwormnew/controllers/bottombar_controller.dart';
 import 'package:bookwormnew/utils/app_colors.dart';
 import 'package:bookwormnew/view/dashboard/dashbaord.dart';
-import 'package:bookwormnew/view/profile/profile.dart';
-import 'package:bookwormnew/view/withdraw/update_wallet_address.dart';
+import 'package:bookwormnew/view/withdraw/wallet_address.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../view/wallet/wallet_screen.dart';
@@ -12,10 +11,10 @@ class CustomBottomBar extends StatelessWidget {
   CustomBottomBar({super.key});
 
   List pages = [
-    const DashBoardScreen(),
+    DashBoardScreen(),
     const Wallet(),
-    const UpdateWalletAddressScreen(),
-    const ProfileScreen()
+    const WalletAddressScreen(),
+    Account(),
   ];
   // int currentIndex = 0;
   // void onTap(int index) {
