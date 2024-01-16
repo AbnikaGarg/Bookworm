@@ -126,7 +126,7 @@ class SignInScreen extends StatelessWidget {
                             },
                             child: Text(
                               "Sign Up",
-                              style: BaseStyle.orangeText16,
+                              style: BaseStyle.orangeText14fw700,
                             ))
                       ],
                     ),

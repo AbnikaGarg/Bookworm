@@ -9,6 +9,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'view/profile/profilescreen.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await PreferenceUtils.init();
@@ -41,7 +43,8 @@ class MyApp extends StatelessWidget {
         initialRoute: Routes.splash,
         getPages: appRoutes(),
         initialBinding: IntialBindings(),
-        transitionDuration: Duration(milliseconds: 300),
+        transitionDuration: const Duration(milliseconds: 300),
+        home: const ProfileScreen(),
       ),
       designSize: const Size(375, 812),
     );

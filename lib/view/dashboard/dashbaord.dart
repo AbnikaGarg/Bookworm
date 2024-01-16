@@ -6,13 +6,15 @@ import 'package:bookwormnew/models/LoginResponse.dart';
 import 'package:bookwormnew/utils/app_colors.dart';
 import 'package:bookwormnew/utils/base_style.dart';
 import 'package:bookwormnew/utils/image_strings.dart';
+import 'package:bookwormnew/view/dashboard/components/sidebar.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DashBoardScreen extends StatefulWidget {
-  const DashBoardScreen({super.key});
+class DashBoardScreen extends StatelessWidget {
+  DashBoardScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
