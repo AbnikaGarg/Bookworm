@@ -26,7 +26,7 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      // resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
           Image.asset(
@@ -45,17 +45,17 @@ class _SignupScreenState extends State<SignupScreen> {
                   heightSpace80,
                   Image.asset(
                     ImagePath.logo,
-                    height: 80.h,
+                    height: 70.h,
                   ),
-                  heightSpace40,
+                  heightSpace30,
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       "SIGN UP",
-                      style: BaseStyle.orangeText24fw600,
+                      style: BaseStyle.orangeText20fw600,
                     ),
                   ),
-                  heightSpace10,
+                  heightSpace5,
                   CustomTextField(
                     labelTitle: "User Name*",
                     suffixIcon: const Icon(
@@ -75,7 +75,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     controller: emailController,
                     validator: FieldValidator().emailValidator,
                   ),
-                  heightSpace20,
+                  heightSpace10,
                   CustomTextField(
                     labelTitle: "Password*",
                     suffixIcon: const Icon(
@@ -85,7 +85,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     controller: passwordController,
                     validator: FieldValidator().passwordValidator,
                   ),
-                  heightSpace10,
+                  heightSpace20,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -97,8 +97,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                   MaterialTapTargetSize.shrinkWrap,
                               value: false,
                               side: BorderSide(color: AppColors.whiteColor),
-                              visualDensity:
-                                  VisualDensity(horizontal: -4, vertical: -4),
+                              visualDensity: const VisualDensity(
+                                  horizontal: -4, vertical: -4),
                               onChanged: (val) {})),
                       RichText(
                         text: TextSpan(children: [
@@ -126,7 +126,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       title1: "SIGN UP",
                     ),
                   ),
-                  heightSpace20,
+                  heightSpace30,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -135,7 +135,6 @@ class _SignupScreenState extends State<SignupScreen> {
                         color: Colors.white,
                         width: Get.width * .20,
                       ),
-                      heightSpace50,
                       Text(
                         "   Or Connect With   ",
                         style: BaseStyle.whitetext14,
@@ -147,6 +146,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       ),
                     ],
                   ),
+                  heightSpace10,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -158,6 +158,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     ],
                   ),
                   Spacer(),
+                  // Expanded(child: const SizedBox()),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -175,7 +176,6 @@ class _SignupScreenState extends State<SignupScreen> {
                           ))
                     ],
                   ),
-                  heightSpace10,
                 ],
               ),
             ),
@@ -187,8 +187,8 @@ class _SignupScreenState extends State<SignupScreen> {
 
   commonImage({imageUrl}) {
     return Container(
-      height: 50,
-      width: 50,
+      height: 50.h,
+      width: 50.w,
       decoration: BoxDecoration(
           image: DecorationImage(image: AssetImage(imageUrl)),
           shape: BoxShape.circle),

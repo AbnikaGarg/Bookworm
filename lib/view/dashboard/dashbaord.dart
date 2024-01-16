@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:bookwormnew/bindings/shared_pref.dart';
 import 'package:bookwormnew/controllers/dashboard_controller.dart';
 import 'package:bookwormnew/models/LoginResponse.dart';
@@ -67,13 +65,12 @@ class DashBoardScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.green, width: 3),
                             shape: BoxShape.circle,
-                            image: DecorationImage(
+                            image: const DecorationImage(
                                 image: AssetImage(ImagePath.profile),
                                 fit: BoxFit.contain)),
                       ),
                     ),
                     Column(
-                      // mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         SizedBox(
@@ -111,7 +108,7 @@ class DashBoardScreen extends StatelessWidget {
                 ),
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 2),
+                    padding: const EdgeInsets.symmetric(horizontal: 2),
                     child: GridView(
                         shrinkWrap: true,
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

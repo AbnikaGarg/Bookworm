@@ -40,17 +40,17 @@ class SignInScreen extends StatelessWidget {
                     heightSpace80,
                     Image.asset(
                       ImagePath.logo,
-                      height: 80.h,
+                      height: 70.h,
                     ),
-                    heightSpace50,
+                    heightSpace30,
                     Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
                         "SIGN IN",
-                        style: BaseStyle.orangeText24fw600,
+                        style: BaseStyle.orangeText20fw600,
                       ),
                     ),
-                    heightSpace20,
+                    heightSpace5,
                     CustomTextField(
                       labelTitle: "Username*",
                       suffixIcon: const Icon(
@@ -144,8 +144,8 @@ class SignInScreen extends StatelessWidget {
 
   commonImage({imageUrl}) {
     return Container(
-      height: 50,
-      width: 50,
+      height: 50.h,
+      width: 50.w,
       decoration: BoxDecoration(
           image: DecorationImage(image: AssetImage(imageUrl)),
           shape: BoxShape.circle),

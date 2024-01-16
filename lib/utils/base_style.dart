@@ -58,11 +58,17 @@ class BaseStyle {
     fontSize: 14.sp,
     fontWeight: FontWeight.w700,
   );
+  static final orangeText20fw600 = GoogleFonts.montserrat(
+    color: const Color(0xffE27329),
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+  );
   static final orangeText24fw600 = GoogleFonts.montserrat(
     color: const Color(0xffE27329),
     fontSize: 24.sp,
     fontWeight: FontWeight.w600,
   );
+
   static final orangeText16fw500 = GoogleFonts.montserrat(
     color: const Color(0xffE27329),
     fontSize: 16.sp,
